@@ -1,21 +1,23 @@
-from flask import Flask, render_template
-app = Flask(__name__)
+from flask import Flask, render_template as ender_dragon
+moon = Flask(__name__)
 
-@app.route("/")
+@moon.route("/")
 def home():
-    return render_template("index.html")
+    return ender_dragon("index.html")
 
-@app.route("/about")
+@moon.route("/about")
 def about():
-    return render_template("about.html")
+    return ender_dragon("about.html")
 
-@app.route("/why")
+@moon.route("/why")
 def why():
     return "<h1>Just...why?</h1><p>dang just why?</p>"
 
-@app.route("/about/contact")
+@moon.route("/about/contact")
 def contact():
     return "<h1>My Contact</h1><p>Hah....you're not getting my number.</p>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    moon.run(debug=True)
+
+# I just learned that I can change some of the things name here like render_dragon as ender_dragon.
